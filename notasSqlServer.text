@@ -4,3 +4,11 @@ C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20230424_182931
 
 C:\SQL2022\Express_ESN
 C:\Program Files\Microsoft SQL Server\160\SSEI\Resources
+
+
+CREATE TABLE Productos (
+  Id int IDENTITY(1,1) PRIMARY KEY,
+  Nombre varchar(50) NOT NULL,
+  Descripcion varchar(100) NULL,
+  Precio float NOT NULL
+);
