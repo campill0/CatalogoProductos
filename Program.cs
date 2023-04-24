@@ -1,8 +1,13 @@
+using CatalogoProductos.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var connectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=true;";
+builder.Services.AddDbContext<CatalogoProductosDbContext>(options => options.UseSqlServer(connectionString));
 
 
 var app = builder.Build();

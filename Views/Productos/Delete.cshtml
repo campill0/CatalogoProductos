@@ -1,0 +1,29 @@
+﻿@using CatalogoProductos.Entities
+@model Producto
+
+<h1>Eliminar Producto</h1>
+
+<p>¿Estás seguro de que deseas eliminar este producto?</p>
+
+<form asp-action="DeleteConfirmed">
+    <input asp-for="Id" type="hidden" />
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control" readonly />
+    </div>
+    <div class="form-group">&nbsp;</div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a class="btn btn-primary" asp-action="Index">Cancelar</a>
+    </div>
+  
+</form>
+
