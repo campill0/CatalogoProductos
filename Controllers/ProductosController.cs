@@ -16,6 +16,7 @@ namespace CatalogoProductos.Controllers
 
         public IActionResult Index()
         {
+            
             var productos = _context.Productos.ToList();
             return View(productos);
         }

@@ -7,8 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var configuration = builder.Configuration;
-var connectionString = configuration.GetConnectionString("ProductosDb");
-//var connectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=true;";
+
+var connectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=true;";
+//var connectionString = "User Id=xxxxx;Password=xxxxxx;Data Source=xxxx:1521/xxxxxx;";
 builder.Services.AddDbContext<CatalogoProductosDbContext>(options => options.UseSqlServer(connectionString));
 
 
