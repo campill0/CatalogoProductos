@@ -15,8 +15,7 @@ namespace CatalogoProductos.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("INTRANET");
-
+           // modelBuilder.HasDefaultSchema("");
             modelBuilder.Entity<Producto>().ToTable("PRODUCTOS");
             modelBuilder.Entity<Producto>().Property(p => p.Id).HasColumnName("ID");
             modelBuilder.Entity<Producto>().Property(p => p.Nombre).HasColumnName("NOMBRE");
@@ -32,3 +31,5 @@ namespace CatalogoProductos.Data
     }
 
 }
+
+
